@@ -11,7 +11,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://gamehub-nu-six.vercel.app/?lang=ru"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gamehub-nu-six.vercel.app/"/>
   </url>
-  <url><loc>https://gamehub.uz/#games</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://gamehub.uz/#about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://gamehub.uz/#contact</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gamehub-nu-six.vercel.app/#games</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://gamehub-nu-six.vercel.app/#about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gamehub-nu-six.vercel.app/#contact</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
