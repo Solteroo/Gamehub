@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /sw.js
 
-Sitemap: https://gamehub-nu-six.vercel.app/sitemap.xml
+Sitemap: https://solteroo.github.io/Gamehub/sitemap.xml
