@@ -8,6 +8,7 @@
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://solteroo.github.io/Gamehub/"/>
     <xhtml:link rel="alternate" hreflang="uz" href="https://solteroo.github.io/Gamehub/?lang=uz"/>
+    <xhtml:link rel="alternate" hreflang="tm" href="https://solteroo.github.io/Gamehub/?lang=tm"/> 
     <xhtml:link rel="alternate" hreflang="ru" href="https://solteroo.github.io/Gamehub/?lang=ru"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://solteroo.github.io/Gamehub/"/>
   </url>
