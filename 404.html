@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page Not Found | GameHub Pro</title>
+<meta name="theme-color" content="#06070d">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:'Sora',system-ui,sans-serif;color:#e9ecf5;
+  background:
+    radial-gradient(900px 600px at 10% -10%,rgba(124,92,255,.28),transparent 60%),
+    radial-gradient(800px 500px at 100% 0%,rgba(34,211,238,.20),transparent 60%),
+    radial-gradient(700px 500px at 50% 110%,rgba(255,94,156,.20),transparent 60%),
+    #06070d;
+  display:grid;place-items:center;padding:24px;overflow:hidden;position:relative;
+}
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:48px 48px;
+  mask-image:radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+.wrap{max-width:620px;text-align:center;position:relative;z-index:2}
+.code{
+  font-size:clamp(140px,28vw,260px);line-height:.85;font-weight:900;letter-spacing:-.04em;
+  background:linear-gradient(135deg,#7c5cff 0%,#22d3ee 50%,#ff5e9c 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 20px 60px rgba(124,92,255,.4));
+  margin-bottom:8px;animation:gradMove 6s ease-in-out infinite;
+  background-size:200% 200%;
+}
+@keyframes gradMove{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.glitch{position:relative;display:inline-block}
+.glitch::before,.glitch::after{
+  content:"404";position:absolute;top:0;left:0;width:100%;
+  background:linear-gradient(135deg,#7c5cff,#22d3ee,#ff5e9c);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  opacity:.5;
+}
+.glitch::before{animation:gl1 2.4s infinite;clip-path:polygon(0 0,100% 0,100% 33%,0 33%)}
+.glitch::after{animation:gl2 3.2s infinite;clip-path:polygon(0 67%,100% 67%,100% 100%,0 100%)}
+@keyframes gl1{0%,100%{transform:translate(0)}20%{transform:translate(-3px,1px)}40%{transform:translate(3px,-1px)}}
+@keyframes gl2{0%,100%{transform:translate(0)}30%{transform:translate(2px,2px)}60%{transform:translate(-2px,-2px)}}
+
+h1{font-size:clamp(28px,5vw,42px);font-weight:800;letter-spacing:-.02em;margin-bottom:16px}
+p{color:#8a90a6;font-size:17px;line-height:1.6;margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:12px;
+  font-family:inherit;font-weight:600;font-size:14px;text-decoration:none;cursor:pointer;
+  border:1px solid transparent;transition:.2s;
+}
+.btn.primary{background:linear-gradient(135deg,#7c5cff,#22d3ee);color:#fff;box-shadow:0 10px 30px -8px rgba(124,92,255,.55)}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 15px 40px -8px rgba(124,92,255,.7)}
+.btn.ghost{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12);color:#e9ecf5}
+.btn.ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(124,92,255,.5)}
+.tag{
+  display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;
+  background:rgba(124,92,255,.15);border:1px solid rgba(124,92,255,.35);color:#cfc6ff;
+  font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:24px;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="tag"><i class="fa-solid fa-triangle-exclamation"></i> Page not found</div>
+  <div class="code"><span class="glitch">404</span></div>
+  <h1>This page is on another quest.</h1>
+  <p>The page you're looking for doesn't exist, was moved, or never made it to release. Let's get you back to the action.</p>
+  <div class="actions">
+    <a href="/" class="btn primary"><i class="fa-solid fa-house"></i> Back to home</a>
+    <a href="/#games" class="btn ghost"><i class="fa-solid fa-gamepad"></i> Browse games</a>
+  </div>
+</div>
+</body>
+</html>

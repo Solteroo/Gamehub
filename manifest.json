@@ -1,0 +1,21 @@
+{
+  "name": "GameHub Pro — Premium PC Games Library",
+  "short_name": "GameHub",
+  "description": "Premium catalog of 50+ handpicked PC games across action, RPG, racing, sports, sandbox and horror.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#06070d",
+  "theme_color": "#06070d",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    { "src": "assets/icons/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Library",   "short_name": "Library",   "url": "/#games", "description": "Browse all games" },
+    { "name": "Favorites", "short_name": "Favorites", "url": "/#games", "description": "Your favorite picks" }
+  ]
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offline — GameHub Pro</title>
+<meta name="theme-color" content="#06070d">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:'Sora',system-ui,sans-serif;color:#e9ecf5;
+  background:
+    radial-gradient(900px 600px at 10% -10%,rgba(124,92,255,.28),transparent 60%),
+    radial-gradient(800px 500px at 100% 0%,rgba(34,211,238,.20),transparent 60%),
+    radial-gradient(700px 500px at 50% 110%,rgba(255,94,156,.20),transparent 60%),
+    #06070d;
+  display:grid;place-items:center;padding:24px;overflow:hidden;position:relative;
+}
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:48px 48px;
+  mask-image:radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+.wrap{max-width:560px;text-align:center;position:relative;z-index:2}
+.icon{
+  width:120px;height:120px;border-radius:30px;margin:0 auto 28px;
+  background:linear-gradient(135deg,#7c5cff,#22d3ee,#ff5e9c);
+  display:grid;place-items:center;color:#fff;font-size:52px;
+  box-shadow:0 30px 80px -20px rgba(124,92,255,.6);
+  animation:float 4s ease-in-out infinite;
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+h1{font-size:clamp(36px,7vw,64px);line-height:1.05;font-weight:800;letter-spacing:-.02em;margin-bottom:16px}
+h1 em{font-style:normal;background:linear-gradient(135deg,#7c5cff,#22d3ee,#ff5e9c);-webkit-background-clip:text;background-clip:text;color:transparent}
+p{color:#8a90a6;font-size:17px;line-height:1.6;margin-bottom:32px;max-width:440px;margin-left:auto;margin-right:auto}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border-radius:12px;
+  font-family:inherit;font-weight:600;font-size:14px;text-decoration:none;cursor:pointer;
+  border:1px solid transparent;transition:.2s;
+}
+.btn.primary{background:linear-gradient(135deg,#7c5cff,#22d3ee);color:#fff;box-shadow:0 10px 30px -8px rgba(124,92,255,.55)}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 15px 40px -8px rgba(124,92,255,.7)}
+.btn.ghost{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12);color:#e9ecf5}
+.btn.ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(124,92,255,.5)}
+.status{
+  margin-top:32px;display:inline-flex;align-items:center;gap:8px;
+  padding:8px 14px;border-radius:999px;font-size:12.5px;
+  background:rgba(255,94,94,.12);border:1px solid rgba(255,94,94,.3);color:#ff8a8a;
+}
+.dot{width:8px;height:8px;border-radius:50%;background:#ff5e5e;animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="icon"><i class="fa-solid fa-wifi"></i></div>
+  <h1>You're <em>offline</em>.</h1>
+  <p>No internet connection right now. Don't worry — your favorites and recently viewed games are saved. Try again when you're back online.</p>
+  <div class="actions">
+    <button class="btn primary" onclick="location.reload()"><i class="fa-solid fa-rotate-right"></i> Try again</button>
+    <a href="/" class="btn ghost"><i class="fa-solid fa-house"></i> Go home</a>
+  </div>
+  <div class="status"><span class="dot"></span> Offline mode</div>
+</div>
+<script>
+window.addEventListener('online', () => location.reload());
+</script>
+</body>
+</html>
