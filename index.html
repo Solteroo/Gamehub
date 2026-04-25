@@ -45,7 +45,7 @@
 <link rel="alternate" hreflang="x-default" href="https://solteroo.github.io/Gamehub/">
 
 <!-- ========== PWA ========== -->
-<link rel="manifest" href="manifest.json">
+<link rel="manifest" href="/Gamehub/manifest.json">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="GameHub">
@@ -53,10 +53,10 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <!-- ========== Favicons ========== -->
-<link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
-<link rel="alternate icon" href="../favicon.svg">
-<link rel="apple-touch-icon" href="./assets/icons/favicon.svg">
-<link rel="mask-icon" href="./assets/icons/favicon.svg" color="#7c5cff">
+<link rel="icon" type="image/svg+xml" href="/Gamehub/assets/icons/favicon.svg">
+<link rel="alternate icon" href="/Gamehub/assets/icons/favicon.svg">
+<link rel="apple-touch-icon" href="/Gamehub/assets/icons/favicon.svg">
+<link rel="mask-icon" href="/Gamehub/assets/icons/favicon.svg" color="#7c5cff">
 
 <!-- ========== Fonts & Icons ========== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,7 +64,7 @@
 <link rel="dns-prefetch" href="https://cdn.cloudflare.steamstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" href="/Gamehub/assets/css/style.css">
 
 <!-- ========== Schema.org JSON-LD ========== -->
 <script type="application/ld+json">
@@ -122,7 +122,7 @@
       <button data-lang="uz" role="menuitem"><span class="lf">🇺🇿</span> <span class="ln">O'zbekcha</span> <i class="fa-solid fa-check lc"></i></button>
       <button data-lang="en" role="menuitem"><span class="lf">🇬🇧</span> <span class="ln">English</span> <i class="fa-solid fa-check lc"></i></button>
       <button data-lang="ru" role="menuitem"><span class="lf">🇷🇺</span> <span class="ln">Русский</span> <i class="fa-solid fa-check lc"></i></button>
-      <button data-lang="tk" role="menuitem"><span class="lf">🇹🇲</span> <span class="ln">Türkmençe</span> <i class="fa-solid fa-check lc"></i></button>
+      <button data-lang="tm" role="menuitem"><span class="lf">🇹🇲</span> <span class="ln">Türkmençe</span> <i class="fa-solid fa-check lc"></i></button>
     </div>
   </div>
 </nav>
@@ -270,13 +270,13 @@
   <span class="fc-tip" data-i18n="fab.call">Call us</span>
 </a>
 
-<script src="./assets/js/games.js"></script>
-<script src="./assets/js/i18n.js"></script>
-<script src="./assets/js/app.js"></script>
+<script src="/Gamehub/assets/js/games.js"></script>
+<script src="/Gamehub/assets/js/i18n.js"></script>
+<script src="/Gamehub/assets/js/app.js"></script>
 <script>
 if('serviceWorker' in navigator){
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js').catch(()=>{});
+    navigator.serviceWorker.register('/Gamehub/sw.js').catch(()=>{});
   });
 }
 </script>
