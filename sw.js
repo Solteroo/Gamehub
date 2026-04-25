@@ -4,24 +4,24 @@
  *   - JS/CSS/manifest: stale-while-revalidate
  *   - Images & fonts: cache-first
  */
-const VERSION = 'gamehub-v1.1.0';
+const VERSION = 'gamehub-v1.1.1';
 const CORE_CACHE   = `core-${VERSION}`;
 const ASSET_CACHE  = `assets-${VERSION}`;
 const IMAGE_CACHE  = `images-${VERSION}`;
 const FONT_CACHE   = `fonts-${VERSION}`;
 
 const CORE_ASSETS = [
-  './',
-  'index.html',
-  'offline.html',
-  '404.html',
-  'manifest.json',
-  'favicon.svg',
-  'assets/css/style.css',
-  'assets/js/app.js',
-  'assets/js/games.js',
-  'assets/js/i18n.js',
-  'assets/icons/favicon.svg'
+  '/Gamehub/',
+  './index.html',
+  './offline.html',
+  './404.html',
+  './manifest.json',
+  './favicon.svg',
+  './assets/css/style.css',
+  './assets/js/app.js',
+  './assets/js/games.js',
+  './assets/js/i18n.js',
+  './assets/icons/favicon.svg'
 ];
 
 self.addEventListener('install', e => {
@@ -65,7 +65,7 @@ self.addEventListener('fetch', e => {
         }
         return res;
       }).catch(() =>
-        caches.match(req).then(m => m || caches.match('offline.html') || caches.match('index.html'))
+        caches.match(req).then(m => m || caches.match('./offline.html') || caches.match('./index.html'))
       )
     );
     return;
@@ -98,7 +98,7 @@ self.addEventListener('fetch', e => {
             caches.open(IMAGE_CACHE).then(c => c.put(req, copy));
           }
           return res;
-        }).catch(() => cached || caches.match('assets/icons/favicon.svg'))
+        }).catch(() => cached || caches.match('./assets/icons/favicon.svg'))
       )
     );
     return;
